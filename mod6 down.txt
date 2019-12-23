@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity mod6 is
+port(aps,bps,cps,clk:in std_logic;ans,bns,cnd:out std_logic);
+end mod6;
+architecture structural of mod6 is
+component tff
+port(t,ps,clk:in std_logic;ns:out std_logic);
+end component;
+component and1
+port(a,b:in std_logic;y:out std_logic);
+end component;
+component or1
+port(a,b:in std_logic;y:out std_logic);
+end component;
+signal f,i,ta,tb,tc:std_logic
+begin
+if(clk='1') then
+	i<=not aps;
+	g0:or1 port map(bps,aps,f);
+	g1:and1 port map(cps,f,ta);
+	g2:and1 port map(i,cps,tb);
+	tc<='1';
+	g3:tff port map(ta,aps,clk,ans);
+	g4:tff port map(tb,bps,clk,bns);
+	g5:tff port map(tc,cps,clk,cns);
+end if;
+end structural;
