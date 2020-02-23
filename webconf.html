@@ -1,0 +1,103 @@
+<html>
+<head>
+	<audio id="myAudio">
+  <source src="E:\HTML\web-design.ogg" type="audio/ogg">
+  <source src="E:\HTML\web-design.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+	<style type="text/css" >
+	 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+.null{
+	width:700px;
+	display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size:15px;
+  transition: all 1s ease;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+/*h2 {
+  
+  background: -webkit-linear-gradient(#cc3300, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size:15px;
+  transition: all 1s ease;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+li a:hover {
+  color: orange;
+}
+footer a{color:white;}
+button:hover{
+	color:orange;
+}
+button{color:white;}
+footer a:hover{
+	color:orange;
+}
+</style>
+<script type="text/javascript" >
+	var x = document.getElementById("myAudio"); 
+
+	function playAudio() { 
+  		x.play(); 
+	} 
+	function pay(){
+		var ti=prompt("No. of tickets(per-head:Rs 249)");
+		document.write("<center ><h1 style=color:#ff3300;margin-top:90px;> <u>Web Design Conference</u></h1> <h3>Bill Id:2409632<br><br>Date:10/01/2020<br><br>Price per Ticket:Rs 249<br><br>CGST:9%<br>SGST:9%<br><br>Amount Payable</h3>"+"<h3> Rs "+((249*ti)+(249*ti*0.18))+"</h3>T&C apply<h2 style=color:#ff3300;>Learn Something NEW!</h2><button>Print</button></center>");
+	}
+	</script>
+	</head>
+	</html>
+	<body style="background-color:#252731">
+		<ul>
+			<li><a><p1 style="font-size: 20px;">Work</p1><p2 style="font-size: 20px;background: -webkit-linear-gradient(-90deg,#cc0000, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">shop</p2></a></li>
+			<li><a class="null"></a></li>
+			<li><a href="" style="color: orange;">HOME</a></li>
+			<li><a href="https://www.nagpurwebdesign.com/about-us/">ABOUT US</a></li>
+			<li><button onclick="playAudio()"style="font-size:15.50px;margin-top:13.5px;margin-left:9px;background-color: #333;border:none;">SPEAKERS</button>></li>
+			<li><a href="https://www.nagpurwebdesign.com/our-work/">NEWS</a></li>
+			<li><a href="https://www.nagpurwebdesign.com/contact/">CONTACTS</a></li>
+			<li><button onclick="pay()"style="font-size:15.50px;margin-top:13.5px;margin-left:9px;background-color: #333;border:none;">BUY TICKETs</button></li>
+</ul>
+<article>
+<section>
+	<h2 style="color: white;margin-left: 75px;margin-top: 95px;font-family: monospace;">Conference 2019</h2>
+<h2 style="font-size: 60px;color:#ff3300;font-family: monospace;margin-left: 75px;margin-bottom: 30px;background: -webkit-linear-gradient(-90deg,#cc0000, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Web Design</h2><h2 style="font-size: 60px;color:#ff3300;font-family: monospace;margin-left: 75px;margin-bottom: 35px;background: -webkit-linear-gradient( -90deg,#cc0000, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"> Conference 2019</h2>
+<h2 style="color: white;margin-left: 75px;margin-bottom:40px;font-family: monospace;">September 6th-7th,Minnesota United States</h2>
+<button onclick="pay()"style="font-size:18px;margin-left:75px;background-color: #333;border:none;">BUY TICKETS</button>
+
+<footer style="margin-left: 75px;font-size:25px;font-family:sans-serif;margin-top:125px;"><a href="https://www.youtube.com/watch?v=-oyeaIirVC0"> Speakers
+</footer>
+</section>
+
+</article>
+

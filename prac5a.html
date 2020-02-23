@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical 5b</title>
+	<h1 align="center"><u>Techniques of sorting:</u></h1>
+</head>
+<body style="background-color:LightSteelBlue;">
+	<h2>Choose the required sort</h2>
+	<br><button onclick="bubble()" style="font-size:18px;">Bubble Sort</button><br><br><hr><br><br>
+	<button onclick="selection()"style="font-size:18px;">Selection Sort</button><br><br><hr><br><br>
+	<button onclick="insertion()"style="font-size:18px;">Insertion Sort</button><br><br><hr><br><br>
+	<script type ="text/javascript">
+		function bubble(){
+			var len = prompt("Please enter the length of the array:");
+			var a = [];
+			var i=0;
+			var j=0;
+			for(i=0;i<len;i++)
+			{
+				a[i]=prompt("Please enter the elements:");
+			}
+			var temp = 0;
+			for(i=0;i<len;i++)
+			{
+				for(j=0;j<len-i-1;j++)
+				{
+					if( a[j]>a[j+1] )
+					{
+						temp=a[j];
+						a[j]=a[j+1];
+						a[j+1]=temp;
+					}
+				}
+			}
+			window.alert(a);
+		}
+	function selection(){
+		var n = prompt("Please enter the length of the array:");
+			var b = [];
+			var i=0;
+			var j=0;
+			for(i=0;i<n;i++)
+			{
+				b[i]=prompt("Please enter the elements:");
+			}
+			var te = 0;
+			for(i=0;i<=n-2;i++)
+			{
+				for(j=i+1;j<=n-1;j++)
+				{
+					if( b[i]>b[j] )
+					{
+						te=b[i];
+						b[i]=b[j];
+						b[j]=te;
+					}
+				}
+			}
+			window.alert(b);
+	}
+	function insertion(){
+		var nn = prompt("Please enter the length of the array:");
+			var c = [];
+			var i=0;
+			var j=0;
+			for(i=0;i<nn;i++)
+			{
+				c[i]=prompt("Please enter the elements:");
+			}
+			var key = 0;
+			for (i = 1; i < nn; i++) { 
+        	key = c[i]; 
+        	j = i - 1; 
+        	while (j >= 0 && c[j] > key) { 
+            c[j + 1] = c[j]; 
+            j = j - 1; 
+        } 
+        c[j + 1] = key; 
+    } 
+    window.alert(c);
+	}
+
+		
+	</script>
+	
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+<head>
+<style type="text/css">
+*{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+outline: none;
+}
+body{
+background-color: LightSteelBlue;
+}
+.wrapper{
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background-color: white;
+max-width: 350px;
+width: 100%;
+padding: 25px;
+border-radius: 5px;
+box-shadow: 0px 8px 10px black;
+}
+.wrapper .input{
+margin-bottom: 10px;
+}
+.wrapper .input input[type="text"]{
+width: 100%;
+border : 1px solid #e0e0e0;
+padding: 10px;
+}
+.wrapper .button input[type="submit"]{
+border: 0px;
+margin-top: 15px;
+padding: 10px;
+width: 100%;
+background:lightgreen;
+font-family: sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+border-radius: 25px;
+cursor: pointer;
+}
+.wrapper #errmsg{
+margin-bottom: 20px;
+padding: 0px;
+background:red;
+text-align: center;
+font-size:14px;
+transition: all 0.5s ease;
+
+}
+</style>
+<script type="text/javascript">
+	
+function validation(){
+var email = document.getElementById("mail").value;
+var user = document.getElementById("username").value;
+var pass = document.getElementById("Password").value;
+var reppass = document.getElementById("Repeat").value;
+var error = document.getElementById("errmsg");
+var bday = document.getElementById("bday").value;
+var contry = document.getElementById("cnt").value;
+
+errmsg.style.padding="10px";
+var patt = /[A-Z]/g;
+var result = email.match(patt);
+if(email.indexOf("@")==-1||result!=null){
+text = "Enter Valid Email";
+errmsg.innerHTML = text;
+return false;
+}
+var res2 = user.match(patt);
+if(res2 != null || user.length == 0 || user.length>20){
+text = "Enter valid username"
+errmsg.innerHTML = text;
+return false;
+}
+if(pass.length==0){
+text = "Password Empty doesn't work.";
+errmsg.innerHTML = text;
+return false;
+}
+if(reppass!=pass){
+text = "Passwords Don't match";
+errmsg.innerHTML = text;
+return false;
+}
+if(bday.length==0){
+text = "Birthdate not filled";
+errmsg.innerHTML = text;
+return false;
+}
+if(contry.length==0){
+text = "Love your Country";
+errmsg.innerHTML = text;
+return false;
+}
+var r =
+window.alert("Thank you. Your data is saved.");
+return true;
+
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+<div id="errmsg"></div>
+<form id="form" onsubmit="return validation()">
+<div class="input">
+<input type="text" placeholder="Email" id="mail">
+</div>
+<div class="input">
+<input type="text" placeholder="Username" id="username">
+</div>
+<div class="input">
+<input type="text" placeholder="Password" id="Password">
+</div>
+<div class="input">
+<input type="text" placeholder="Repeat Password" id="Repeat">
+</div>
+<div class="input">
+<input type="text" placeholder="Birthdate" id="bday">
+</div>
+<div class="input">
+<p style="font-family: sans-serif;font-size: 13px;margin-left: 12px;">Profile-image&nbsp;&nbsp;&nbsp;&nbsp;<button >Upload image</button>
+</div>
+<div class="input">
+<input type="text" placeholder="Country" id="cnt">
+</div>
+<div class="input">
+<input type="text" placeholder="Message" id="msg">
+</div>
+<div class="input">
+<input type="radio" name="terms" class="radioo" value="Agree to terms and conditions">
+</div>
+<div class="button">
+<input type="submit">
+</div>
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical 5a</title>
+</head>
+<script type ="text/javascript">
+	function position(){
+		var str=prompt("Please enter a string:");
+		//code for finding the position of the vowel
+		var i;
+		for(i=0;i<str.length;i++){
+			if(str[i]=="a"||str[i]=="e"||str[i]=="i"||str[i]=="o"||str[i]=="u")
+				{
+					
+					alert(str.indexOf(str[i+1]));
+					break;
+				}
+	}
+	
+			
+	}
+	
+	function concatenate(){
+		var str1 = prompt("Please enter string 1:");
+		var str2 = prompt("Please enter string 2:");
+		var str3="";
+		var i;
+		for(i=0;i<str1.length;i++)
+		{
+			str3=str3+str1[i];
+		}
+		for(i=0;i<str2.length;i++)
+		{
+			str3=str3+str2[i];
+		}
+		alert(str3);
+    }
+	function reversal(){
+		var str = prompt("Please enter a string");
+		var revstr="";
+		for(i=(str.length)-1;i>=0;i--)
+		{
+			revstr=revstr+str[i];
+		}
+		alert(revstr);
+
+
+	
+	}
+
+	
+
+</script>
+<body>
+	<h1>Operations to be carried out on a string</h1><br>
+	<button onclick="reversal()"style="font-size:18px;">Reversal of string</button><br><br><hr><br><br>
+	<button onclick="position()"style="font-size:18px;">Position of Vowel in a string</button><br><br><hr><br><br>
+	<button onclick="concatenate()"style="font-size:18px;">Concatenation of strings</button><br><br><hr><br><br>
+
+</body>
+</html>
