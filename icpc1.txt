@@ -1,10 +1,11 @@
+#The question is from ICPC 2018. I am providing here the gist of the question. The question was given a number, task was to remove any one number from the given number so that we get the minimum number possible.
 def check(n):
-    a=[]
+    a = []
     i=0
-    while n>0:
+    while n > 0 :
         a.append(n%10)
-        n=n//10
-        i=i+1
+        n = n//10
+        i = i+1
     k=0
     s=0
     b=[]
